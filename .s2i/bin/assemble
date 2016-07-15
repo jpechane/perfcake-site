@@ -1,4 +1,6 @@
 #!/bin/bash
+mkdir -p /tmp/site-source
+cd /tmp/site-source
 git clone https://github.com/jpechane/Web perfcake
 cd perfcake
 awestruct
