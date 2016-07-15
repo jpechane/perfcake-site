@@ -6,7 +6,7 @@ cd /tmp/site-source
 git clone -v https://github.com/jpechane/Web perfcake
 cd perfcake
 awestruct
-cp -R _site/* /apache2/www
+cp -fvR _site/* /apache2/www
 cd ..
 
 rm -rf /tmp/site-source
