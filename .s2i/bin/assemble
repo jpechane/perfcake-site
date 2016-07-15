@@ -3,10 +3,14 @@ rm -rf /tmp/site-source
 mkdir -p /tmp/site-source
 cd /tmp/site-source
 
+echo Before: `grep h1 /apache2/www/index.html`
 git clone -v https://github.com/jpechane/Web perfcake
 cd perfcake
+echo Template: `grep h1 index.html`
 awestruct
+echo Generated: `grep h1 _site/index.html`
 cp -fvR _site/* /apache2/www
+echo After: `grep h1 /apache2/www/index.html`
 cd ..
 
 rm -rf /tmp/site-source
