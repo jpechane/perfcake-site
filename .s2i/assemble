@@ -1,6 +1,0 @@
-#!/bin/bash
-git clone https://github.com/jpechane/Web perfcake
-cd perfcake
-awestruct
-cp -R _site/* /apache2/www
-cd ..
